@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "**/*.devenv*": true,
+    "**/*.direnv*": true,
+    "**/*.next*": true,
+    "**/node_modules": true,
+    "**/.vercel": true
+  }
+}
