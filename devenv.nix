@@ -27,6 +27,14 @@
     yarn.enable = true;
   };
 
+  devcontainer = {
+    enable = true;
+    settings = {
+      image = "ghcr.io/cachix/devenv:latest";
+      customizations.vscode.extensions = [];
+    };
+  };
+
   pre-commit.hooks = {
     # Nix
     alejandra.enable = true;
