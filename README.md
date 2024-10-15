@@ -47,7 +47,7 @@ the ability to interact with Vercel data.
 When committing, use
 [commitizen](https://commitizen-tools.github.io/commitizen/) to format the
 commit title and subtext to ensure
-[conventional commits](https://commitizen-tools.github.io/commitizen/).
+[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 There are also a number of commit hooks set up for
 [pre-commit](https://pre-commit.com) to ensure consistent formatting and style.
