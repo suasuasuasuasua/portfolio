@@ -6,7 +6,6 @@
       commitizen
       gnupg
 
-      just
       fastfetch
       onefetch
       tree
@@ -14,16 +13,18 @@
       markdownlint-cli
       nixfmt-rfc-style
     ]
-    ++ (with nodePackages; [vercel]);
+    ++ (with nodePackages; [
+      vercel
+    ]);
 
   languages.javascript = {
     enable = true;
 
-    # npm but better? lol
     pnpm = {
       enable = true;
       install.enable = true;
     };
+    yarn.enable = true;
   };
 
   pre-commit.hooks = {
