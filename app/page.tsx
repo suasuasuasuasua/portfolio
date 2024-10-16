@@ -55,6 +55,17 @@ export default function Home() {
             <FontAwesomeIcon icon={faEnvelope} className="fa-fw" />
           </a>
         </div>
+        <p className="text-center text-sm gap-2">
+          <span className="mx-1">Made with ❤️ by</span>
+          <a
+            className="hover:underline hover:underline-offset-4"
+            href="https://github.com/suasuasuasuasua/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            suasuasuasuasua
+          </a>
+        </p>
       </footer>
     </div>
   );
