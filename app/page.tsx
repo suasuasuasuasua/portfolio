@@ -1,6 +1,3 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faM } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,56 +14,6 @@ export default function Home() {
         />
         hi my name is justin, and i want to be a web developer when i grow up :)
       </main>
-
-      <footer className="row-start-3 gap-6 flex-wrap items-center justify-center">
-        <div className="flex gap-4 mb-4 justify-center">
-          <a
-            className="flex items-center gap-2"
-            href="https://github.com/suasuasuasuasua/personal-website"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} className="fa-fw" />
-          </a>
-          <a
-            className="flex items-center gap-2"
-            href="https://linkedin.com/in/jhoang124"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="fa-fw" />
-          </a>
-          <a
-            className="flex items-center gap-2 "
-            href="https://matrix.to/#/@suasuasuasuasua:matrix.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {/* TODO: find a matrix icon... could just use an actual svg, but then
-          it won't match the formatting */}
-            <FontAwesomeIcon icon={faM} className="fa-fw" />
-          </a>
-          <a
-            className="flex items-center gap-2"
-            href="mailto:j124.dev@proton.me"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faEnvelope} className="fa-fw" />
-          </a>
-        </div>
-        <p className="text-center text-sm gap-2">
-          <span className="mx-1">Made with ❤️ by</span>
-          <a
-            className="hover:underline hover:underline-offset-4"
-            href="https://github.com/suasuasuasuasua/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            suasuasuasuasua
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }
