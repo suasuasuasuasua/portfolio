@@ -3,8 +3,9 @@
   packages = with pkgs;
     [
       git
-      commitizen
       gnupg
+      git-cliff
+      commitizen
 
       fastfetch
       onefetch
@@ -24,7 +25,6 @@
       enable = true;
       install.enable = true;
     };
-    yarn.enable = true;
   };
 
   devcontainer = {
