@@ -1,6 +1,12 @@
 import "./globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+
+// Configure font awesome for next.js
+// https://docs.fontawesome.com/web/use-with/react/use-with
+config.autoAddCss = false;
 
 const geistSans = localFont({
   src: "../public/fonts/GeistVF.woff",
