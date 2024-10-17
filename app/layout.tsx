@@ -1,5 +1,5 @@
-import Footer from "@/app/ui/footer/footer";
-import Header from "@/app/ui/header/header";
+import Footer from "@/app/ui/footer";
+import Header from "@/app/ui/header";
 import "@/styles/globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";

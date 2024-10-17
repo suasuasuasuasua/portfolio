@@ -1,6 +1,7 @@
-import FooterIcon from "@/app/ui/footer/icon";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faM } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
@@ -35,5 +36,26 @@ export default function Footer() {
         </a>
       </p>
     </footer>
+  );
+}
+
+function FooterIcon({
+  iconName,
+  link,
+}: {
+  iconName: IconDefinition;
+  link: string;
+}) {
+  return (
+    <a
+      className="flex items-center gap-2"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {/* TODO: If iconName doesn't exist, this will throw an error. this used
+      to be in a separate file but no more... */}
+      <FontAwesomeIcon icon={iconName} className="fa-fw" />
+    </a>
   );
 }
