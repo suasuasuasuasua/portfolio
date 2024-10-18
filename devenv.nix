@@ -4,6 +4,7 @@
     [
       git
       gnupg
+      pinentry-curses
       git-cliff
       commitizen
 
@@ -14,9 +15,7 @@
       markdownlint-cli
       nixfmt-rfc-style
     ]
-    ++ (with nodePackages; [
-      vercel
-    ]);
+    ++ (with nodePackages; [vercel]);
 
   languages.javascript = {
     enable = true;
