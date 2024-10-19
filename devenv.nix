@@ -3,8 +3,10 @@
   packages = with pkgs;
     [
       git
-      commitizen
       gnupg
+      pinentry-curses
+      git-cliff
+      commitizen
 
       fastfetch
       onefetch
@@ -13,9 +15,7 @@
       markdownlint-cli
       nixfmt-rfc-style
     ]
-    ++ (with nodePackages; [
-      vercel
-    ]);
+    ++ (with nodePackages; [vercel]);
 
   languages.javascript = {
     enable = true;
@@ -24,7 +24,6 @@
       enable = true;
       install.enable = true;
     };
-    yarn.enable = true;
   };
 
   devcontainer = {
@@ -55,6 +54,12 @@
 
     # HTML, CSS, JS, TS, etc.
     prettier.enable = true;
-    eslint.enable = true;
+    eslint = {
+      enable = true;
+      args = ["--fix app/"];
+      settings = {
+        extensions = "\.(js|jsx|ts|tsx|mdx)$";
+      };
+    };
   };
 }
