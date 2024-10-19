@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 // Define the header elements as well as the root path and label
 const headers = {
@@ -14,6 +17,8 @@ const headers = {
 const imageSize = 28;
 
 export default function Header() {
+  const [activeHeader, setActiveHeader] = useState(headers.home.root);
+
   return (
     <header>
       <nav className="mx-auto flex items-center justify-between my-4 px-4">
@@ -35,7 +40,11 @@ export default function Header() {
             <li key={key}>
               <Link
                 href={`${value.root}`}
-                className="text-sm font-sans hover:underline hover:underline-offset-4"
+                onClick={() => {
+                  console.log(value.root);
+                  setActiveHeader(value.root);
+                }}
+                className={`text-sm font-sans hover:underline hover:underline-offset-4 ${activeHeader === value.root ? "dot-active" : ""}`}
               >
                 {value.label}
               </Link>
