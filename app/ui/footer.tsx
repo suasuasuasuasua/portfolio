@@ -1,24 +1,22 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faM } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconType } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiMatrix, SiProton } from "react-icons/si";
 
 const socialIcons = {
   github: {
-    iconName: faGithub,
+    icon: FaGithub,
     link: "https://github.com/suasuasuasuasua/personal-website",
   },
   linkedIn: {
-    iconName: faLinkedin,
+    icon: FaLinkedin,
     link: "https://linkedin.com/in/jhoang124",
   },
   matrix: {
-    /* TODO: find a matrix icon... could just use an actual svg, but then it * won't match the formatting */
-    iconName: faM,
+    icon: SiMatrix,
     link: "https://matrix.to/#/@suasuasuasuasua:matrix.org",
   },
   email: {
-    iconName: faEnvelope,
+    icon: SiProton,
     link: "mailto:j124.dev@proton.me",
   },
 };
@@ -31,10 +29,7 @@ export default function Footer() {
         {/* Map each of the social entries to a icon */}
         {Object.entries(socialIcons).map(([key, value]) => (
           <li key={key}>
-            <FooterIcon
-              iconName={value.iconName}
-              link={value.link}
-            ></FooterIcon>
+            <FooterIcon icon={value.icon} link={value.link}></FooterIcon>
           </li>
         ))}
       </ul>
@@ -55,13 +50,7 @@ export default function Footer() {
   );
 }
 
-function FooterIcon({
-  iconName,
-  link,
-}: {
-  iconName: IconDefinition;
-  link: string;
-}) {
+function FooterIcon({ icon: Icon, link }: { icon: IconType; link: string }) {
   return (
     <a
       className="flex items-center gap-2"
@@ -69,7 +58,7 @@ function FooterIcon({
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FontAwesomeIcon icon={iconName} className="fa-fw" />
+      <Icon />
     </a>
   );
 }
