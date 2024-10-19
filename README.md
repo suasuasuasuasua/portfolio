@@ -12,8 +12,8 @@ React.
   - [headless ui](https://headlessui.com/) as a complimentary `tailwindcss` UI
     library
 - [pnpm](https://pnpm.io) for the package manager
-  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` formatter
-  - [prettier](https://prettier.io) for the general linter
+  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` linter
+  - [prettier](https://prettier.io) for the general formatter
   - [font awesome icons](https://fontawesome.com) which are
     [set up for React and Next.js](https://docs.fontawesome.com/web/use-with/react)
 - Deploying (currently) on [Vercel](https://vercel.com) at
