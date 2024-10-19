@@ -6,8 +6,8 @@ const headers = {
   home: { root: "/", label: "Home" },
   blog: { root: "/blog", label: "Blog" },
   portfolio: { root: "/portfolio", label: "Portfolio" },
-  tech: { root: "/tech", label: "Tech Stack" },
-  about: { root: "/about", label: "About Me" },
+  tech: { root: "/tech", label: "Tech" },
+  about: { root: "/about", label: "About" },
 };
 
 // The size of the icon
