@@ -8,8 +8,10 @@ React.
 
 - `nix` to setup the [development machine](#developer-workflow)
 - [Next.js](https://nextjs.org) for the [React](https://react.dev) framework
-  with [tailwindcss](https://tailwindcss.com)
-  - [pnpm](https://pnpm.io) for the package manager
+- [tailwindcss](https://tailwindcss.com)
+  - [headless ui](https://headlessui.com/) as a complimentary `tailwindcss` UI
+    library
+- [pnpm](https://pnpm.io) for the package manager
   - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` formatter
   - [prettier](https://prettier.io) for the general linter
   - [font awesome icons](https://fontawesome.com) which are
