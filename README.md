@@ -100,3 +100,20 @@ commit title and subtext to ensure
 
 There are also a number of commit hooks set up for
 [pre-commit](https://pre-commit.com) to ensure consistent formatting and style.
+
+### Deployment
+
+Purchase a domain name from a domain name registrar like
+[namecheap](https://www.namecheap.com/). Alternatives include
+[Cloudflare](https://www.cloudflare.com/products/registrar/) or
+[GoDaddy](https://www.godaddy.com/).
+
+Vercel makes it easy to setup and deploy your `git` project. First, sign up and
+connect your GitHub account to Vercel, then create a new Vercel project from one
+of your GitHub repositories. Finally, connect the Vercel server's IP address and
+domain name by adding an A and CNAME record to your domain under your domain
+name provider.
+
+Each commit to `main` will be to the production website, and pushes to other
+branches will be to preview websites. See each build and deployment status under
+the `deployment` tab.
