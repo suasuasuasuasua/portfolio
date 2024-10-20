@@ -23,9 +23,9 @@ const socialIcons = {
 
 export default function Footer() {
   return (
-    <footer className=" mt-auto space-y-2">
+    <footer className="mt-auto space-y-2">
       {/* Row 1 - List of socials */}
-      <ul className="flex flex-row space-x-10 justify-center">
+      <ul className="flex flex-row justify-center space-x-10">
         {/* Map each of the social entries to a icon */}
         {Object.entries(socialIcons).map(([key, value]) => (
           <li key={key}>
@@ -35,7 +35,7 @@ export default function Footer() {
       </ul>
 
       {/* Row 2 - GitHub Plug */}
-      <p className="text-center text-sm gap-2">
+      <p className="gap-2 text-center text-sm">
         <span className="mx-1">Made with ❤️ by</span>
         <a
           className="hover:underline hover:underline-offset-4"

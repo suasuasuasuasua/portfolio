@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="mx-auto flex items-center justify-between my-4 px-4">
+      <nav className="mx-auto my-4 flex items-center justify-between px-4">
         {/* Header Icon */}
         <div className="flex lg:flex-1">
           <Image
@@ -34,7 +34,7 @@ export default function Header() {
         </div>
 
         {/* List of Headers */}
-        <ul className="flex flex-row lg:space-x-12 sm:space-x-8 space-x-4">
+        <ul className="flex flex-row space-x-4 sm:space-x-8 lg:space-x-12">
           {/* Map each of the header entries to a link */}
           {Object.entries(headers).map(([key, value]) => (
             <li key={key}>
@@ -44,7 +44,7 @@ export default function Header() {
                   console.log(value.root);
                   setActiveHeader(value.root);
                 }}
-                className={`text-sm font-sans hover:underline hover:underline-offset-4 ${activeHeader === value.root ? "dot-active" : ""}`}
+                className={`font-sans text-sm hover:underline hover:underline-offset-4 ${activeHeader === value.root ? "dot-active" : ""}`}
               >
                 {value.label}
               </Link>

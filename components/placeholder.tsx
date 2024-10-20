@@ -9,10 +9,10 @@ export default function Placeholder() {
   return (
     <div className="flex flex-col items-center space-y-4">
       {/* construction notice */}
-      <div className="flex flex-row font-bold lg-max-w-xl max-w-sm">
-        <CiWarning className="mt-1 mx-1" />
+      <div className="lg-max-w-xl flex max-w-sm flex-row font-bold">
+        <CiWarning className="mx-1 mt-1" />
         This page is under construction!
-        <CiWarning className="mt-1 mx-1" />
+        <CiWarning className="mx-1 mt-1" />
       </div>
 
       {/* plink :) */}
@@ -24,11 +24,11 @@ export default function Placeholder() {
         layout={"responsive"}
         unoptimized={true}
         priority
-        className="lg:max-w-xl md:max-w-lg max-w-xs"
+        className="max-w-xs md:max-w-lg lg:max-w-xl"
       />
 
       {/* note and links :) */}
-      <div className="lg:max-w-xl max-w-sm">
+      <div className="max-w-sm lg:max-w-xl">
         Check out the
         <span className="mx-1 font-bold">
           <Link
