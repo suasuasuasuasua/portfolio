@@ -33,8 +33,7 @@ export default function RootLayout({
       ></meta>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased
-        min-h-screen flex flex-col pb-1`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col pb-1 antialiased`}
       >
         <Header />
         {children}
