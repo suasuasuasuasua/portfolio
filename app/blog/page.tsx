@@ -1,8 +1,5 @@
+import Placeholder from "@/components/placeholder";
+
 export default function BlogPage() {
-  return (
-    <>
-      <h1>Blog page</h1>
-      <p>Hello</p>
-    </>
-  );
+  return <Placeholder />;
 }
