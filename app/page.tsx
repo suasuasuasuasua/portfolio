@@ -1,20 +1,104 @@
-import { Spotify } from "react-spotify-embed";
+import { albums, books, technologies, os } from "@/app/nows";
+import Album from "@/components/now/album";
+import OperatingSystem from "@/components/now/os";
+import Technology from "@/components/now/technology";
 
 export default function Home() {
   return (
-    <div className="flex flex-col mx-10">
+    <div className="mx-4 flex flex-col">
       {/* Leading Title */}
-      <h1 className="font-bold">Welcome to my website!</h1>
+      <h1 className="font-bold">Welcome to My Website!</h1>
 
-      {/* Current */}
-      <div className="flex flex-row my-10">
+      <p>
+        This is my <span className="italic">now</span> page where I will be
+        talking about what&apos;s going on{" "}
+        <span className="font-bold"> right now</span> in my life.
+      </p>
+      <p>
+        I&apos;ll also talk about things that I&apos;m interested in or like at
+        this moment.
+      </p>
+
+      {/* Current X */}
+      <div className="mt-4 flex flex-col space-y-4">
         {/* Current Listen */}
-        <div className="flex flex-col">
-          <p className="font-semibold">Current Listen</p>
-          <Spotify link="https://open.spotify.com/album/4eguh1dJUXRh0IMiLKRwab" />
+        <div>
+          <p className="font-semibold">Albums</p>
+          <ul>
+            {albums.map(album => (
+              <li key={album.link}>
+                <Album
+                  title={album.title}
+                  artist={album.artist}
+                  link={album.link}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-        {/* TODO: Current Book */}
+
+        {/* Current Book */}
+        <div>
+          <p className="font-semibold">Books</p>
+          <ul>
+            {books.map(book => (
+              <li key={book.link}>
+                <Album
+                  title={book.title}
+                  artist={book.author}
+                  link={book.link}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Current Technologies */}
+        <div>
+          <p className="font-semibold">Current Technologies</p>
+          <ul>
+            {technologies.map(tech => (
+              <li key={tech.link}>
+                <Technology
+                  name={tech.name}
+                  description={tech.description}
+                  link={tech.link}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Current Operating Systems */}
+        <div>
+          <p className="font-semibold">Albums</p>
+          <ul>
+            {os.map(os => (
+              <li key={os.link}>
+                <OperatingSystem name={os.name} icon={os.icon} link={os.link} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
+
+// {/* Current Book */ }
+// <div>
+//   <p className="font-semibold">Books</p>
+//   {books.map(book => book)}
+// </div>
+//
+// {/* Current Technologies */ }
+// <div>
+//   <p className="font-semibold">Technologies</p>
+//   {technologies.map(tech => tech)}
+// </div>
+//
+// {/* Current OS */ }
+// <div>
+//   <p className="font-semibold">Operating Systems</p>
+//   {os.map(os => os)}
+// </div>
