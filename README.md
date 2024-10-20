@@ -15,8 +15,8 @@ React.
   - [headless ui](https://headlessui.com/) as a complimentary `tailwindcss` UI
     library
 - [pnpm](https://pnpm.io) for the package manager
-  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` formatter
-  - [prettier](https://prettier.io) for the general linter
+  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` linter
+  - [prettier](https://prettier.io) for the general formatter
   - [font awesome icons](https://fontawesome.com) which are
     [set up for React and Next.js](https://docs.fontawesome.com/web/use-with/react)
 - Deploying (currently) on [Vercel](https://vercel.com) at
@@ -102,3 +102,20 @@ commit title and subtext to ensure
 
 There are also a number of commit hooks set up for
 [pre-commit](https://pre-commit.com) to ensure consistent formatting and style.
+
+### Deployment
+
+Purchase a domain name from a domain name registrar like
+[namecheap](https://www.namecheap.com/). Alternatives include
+[Cloudflare](https://www.cloudflare.com/products/registrar/) or
+[GoDaddy](https://www.godaddy.com/).
+
+Vercel makes it easy to setup and deploy your `git` project. First, sign up and
+connect your GitHub account to Vercel, then create a new Vercel project from one
+of your GitHub repositories. Finally, connect the Vercel server's IP address and
+domain name by adding an A and CNAME record to your domain under your domain
+name provider.
+
+Each commit to `main` will be to the production website, and pushes to other
+branches will be to preview websites. See each build and deployment status under
+the `deployment` tab.

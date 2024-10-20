@@ -1,21 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 // Define the header elements as well as the root path and label
 const headers = {
   home: { root: "/", label: "Home" },
   blog: { root: "/blog", label: "Blog" },
   portfolio: { root: "/portfolio", label: "Portfolio" },
-  tech: { root: "/tech", label: "Tech Stack" },
-  about: { root: "/about", label: "About Me" },
+  tech: { root: "/tech", label: "Tech" },
+  about: { root: "/about", label: "About" },
 };
 
-const imageSize = 30;
+// The size of the icon
+const imageSize = 28;
 
 export default function Header() {
+  const [activeHeader, setActiveHeader] = useState(headers.home.root);
+
   return (
     <header>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav className="mx-auto flex items-center justify-between my-4 px-4">
         {/* Header Icon */}
         <div className="flex lg:flex-1">
           <Image
@@ -24,18 +30,21 @@ export default function Header() {
             width={imageSize}
             height={imageSize}
             priority
-            className="h-8 w-auto -m-1.5 p-1.5"
           />
         </div>
 
         {/* List of Headers */}
-        <ul className="flex flex-row space-x-10">
+        <ul className="flex flex-row lg:space-x-12 sm:space-x-8 space-x-4">
           {/* Map each of the header entries to a link */}
           {Object.entries(headers).map(([key, value]) => (
             <li key={key}>
               <Link
                 href={`${value.root}`}
-                className="text-sm font-sans leading-6"
+                onClick={() => {
+                  console.log(value.root);
+                  setActiveHeader(value.root);
+                }}
+                className={`text-sm font-sans hover:underline hover:underline-offset-4 ${activeHeader === value.root ? "dot-active" : ""}`}
               >
                 {value.label}
               </Link>

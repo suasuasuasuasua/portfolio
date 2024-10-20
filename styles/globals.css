@@ -25,3 +25,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.dot-active {
+  position: relative;
+}
+
+.dot-active::before {
+  content: ".";
+  position: absolute;
+  top: calc(60%);
+  left: calc(50%);
+}
