@@ -1,5 +1,8 @@
 # Personal Website
 
+| [![CodeQL](https://github.com/suasuasuasuasua/personal-website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suasuasuasuasua/personal-website/actions/workflows/github-code-scanning/codeql) | [![Generate changelog](https://github.com/suasuasuasuasua/personal-website/actions/workflows/changelog.yml/badge.svg)](https://github.com/suasuasuasuasua/personal-website/actions/workflows/changelog.yml) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 Hi, this is my personal website! I'm currently between classical web development
 with html, css, and javascript and modern web development with Next.js and
 React.
@@ -72,8 +75,7 @@ Install `nix` from
 [Determinate Systems](https://determinate.systems/posts/determinate-nix-installer/).
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf -L \
-     https://install.determinate.systems/nix | sh -s -- install
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
 Use [`devenv`](https://devenv.sh) and [`direnv`](https://direnv.net) to install
