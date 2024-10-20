@@ -20,17 +20,14 @@ dependencies:
   react-icons:
     specifier: ^5.3.0
     version: 5.3.0(react@18.3.1)
-  react-spotify-embed:
-    specifier: ^2.0.4
-    version: 2.0.4
 
 devDependencies:
   "@trivago/prettier-plugin-sort-imports":
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.3.3)
   "@types/node":
-    specifier: ^20.16.12
-    version: 20.16.12
+    specifier: ^20.16.13
+    version: 20.16.13
   "@types/react":
     specifier: ^18.3.11
     version: 18.3.11
@@ -815,10 +812,10 @@ packages:
       }
     dev: true
 
-  /@types/node@20.16.12:
+  /@types/node@20.16.13:
     resolution:
       {
-        integrity: sha512-LfPFB0zOeCeCNQV3i+67rcoVvoN5n0NVuR2vLG0O5ySQMgchuZlC4lgz546ZOJyDtj5KIgOxy+lacOimfqZAIA==,
+        integrity: sha512-GjQ7im10B0labo8ZGXDGROUl9k0BNyDgzfGpb4g/cl+4yYDWVKcozANF4FGr4/p0O/rAkQClM6Wiwkije++1Tg==,
       }
     dependencies:
       undici-types: 6.19.8
@@ -4473,17 +4470,6 @@ packages:
         integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
       }
     dev: true
-
-  /react-spotify-embed@2.0.4:
-    resolution:
-      {
-        integrity: sha512-bVIToA3Rsw/HhFqBpvveUMJyvijgX0Rw8kpkm5lWRr0GgNyjNynr2rcdpH2OuCTMKkN3ynBn+Zw5nJ794N8vJw==,
-      }
-    engines: { node: ">=14" }
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    dev: false
 
   /react@18.3.1:
     resolution:
