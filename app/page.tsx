@@ -1,5 +1,7 @@
-import Placeholder from "@/components/placeholder";
-
 export default function Home() {
-  return <Placeholder />;
+  return (
+    <div className="flex flex-col mx-10">
+      <h1 className="font-bold">Welcome to my website!</h1>
+    </div>
+  );
 }
