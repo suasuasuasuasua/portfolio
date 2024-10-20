@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiWarning } from "react-icons/ci";
 
-const height = 300;
-const width = 300;
+const height = 200;
+const width = 200;
 
 export default function Placeholder() {
   return (
     <div className="flex flex-col items-center space-y-4">
       {/* construction notice */}
-      <div className="flex flex-row font-bold">
+      <div className="flex flex-row font-bold lg-max-w-xl max-w-sm">
         <CiWarning className="mt-1 mx-1" />
         This page is under construction!
         <CiWarning className="mt-1 mx-1" />
@@ -21,10 +21,14 @@ export default function Placeholder() {
         alt="plink"
         width={width}
         height={height}
+        layout={"responsive"}
+        unoptimized={true}
+        priority
+        className="lg:max-w-xl md:max-w-lg max-w-xs"
       />
 
       {/* note and links :) */}
-      <div>
+      <div className="lg:max-w-xl max-w-sm">
         Check out the
         <span className="mx-1 font-bold">
           <Link
