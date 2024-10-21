@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface ComputerProps {
   [key: string]: {
     specs: ComputerSpecs;
@@ -6,10 +8,13 @@ export interface ComputerProps {
 }
 
 interface ComputerSpecs {
-  os: string;
+  os: {
+    icon: IconType;
+    name: string;
+  };
   cpu: string;
   gpu: string;
-  ram: number;
+  ram: string;
 }
 interface ComputerMetaProps {
   name: string;

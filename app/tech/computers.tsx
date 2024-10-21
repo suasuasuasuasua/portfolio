@@ -1,15 +1,20 @@
 import { ComputerProps, Usage } from "@/types/computer";
+import { FaApple } from "react-icons/fa";
+import { SiNixos } from "react-icons/si";
 
 export const computers: ComputerProps = {
   macbook: {
     specs: {
-      os: "macOS Sequoia",
+      os: {
+        icon: FaApple,
+        name: "macOS Sequoia",
+      },
       cpu: "M3 Max 14 Core (10 performance, 4 efficiency)",
       gpu: "M3 Max 18 Core",
-      ram: 36.0,
+      ram: "36.0GB Unified RAM",
     },
     meta: {
-      name: "Macbook Pro",
+      name: "Macbook Pro M3 Max",
       releaseYear: 2023,
       acquireYear: 2024,
       description: `
@@ -47,10 +52,13 @@ exhaustion has set in on me and now I'm ready to just create, work, and play.
   },
   penguin: {
     specs: {
-      os: "NixOS",
+      os: {
+        icon: SiNixos,
+        name: "NixOS",
+      },
       cpu: "i5-1135G7 processor Quad-core 2.40 GHz",
       gpu: "Intel Iris Xe Graphics",
-      ram: 8.0,
+      ram: "8.0GB DDR4 RAM",
     },
     meta: {
       name: "Acer Spin 713-3w",
