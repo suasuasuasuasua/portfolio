@@ -1,4 +1,4 @@
-import Link from "next/link";
+import HighlightedLink from "@/components/link";
 import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiMatrix, SiProton } from "react-icons/si";
@@ -38,14 +38,12 @@ export default function Footer() {
       {/* Row 2 - GitHub Plug */}
       <p className="gap-2 text-center text-sm">
         <span className="mx-1">Made with ❤️ by</span>
-        <Link
-          className="hover:underline hover:underline-offset-4"
-          href="https://github.com/suasuasuasuasua/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <HighlightedLink
+          link="https://github.com/suasuasuasuasua/"
+          highlight=""
         >
           suasuasuasuasua
-        </Link>
+        </HighlightedLink>
       </p>
     </footer>
   );
@@ -53,13 +51,8 @@ export default function Footer() {
 
 function FooterIcon({ icon: Icon, link }: { icon: IconType; link: string }) {
   return (
-    <Link
-      className="flex items-center gap-2"
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <HighlightedLink link={link} highlight="">
       <Icon />
-    </Link>
+    </HighlightedLink>
   );
 }

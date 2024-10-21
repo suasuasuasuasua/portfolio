@@ -1,5 +1,6 @@
 import { albums, books, technologies, os } from "@/app/nows";
 import Album from "@/components/now/album";
+import Book from "@/components/now/book";
 import OperatingSystem from "@/components/now/os";
 import Technology from "@/components/now/technology";
 
@@ -43,9 +44,9 @@ export default function Home() {
           <ul>
             {books.map(book => (
               <li key={book.link}>
-                <Album
+                <Book
                   title={book.title}
-                  artist={book.author}
+                  author={book.author}
                   link={book.link}
                 />
               </li>
