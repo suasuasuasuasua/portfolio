@@ -4,15 +4,29 @@ import { BsGpuCard } from "react-icons/bs";
 import { FaMemory } from "react-icons/fa";
 import { GoCpu } from "react-icons/go";
 
-export default function Computer({ computer: { specs, meta } }: ComputerProps) {
+export default function Computer({
+  computer: {
+    specs: {
+      os: { icon: Icon, name: osName },
+      cpu,
+      gpu,
+      ram,
+    },
+    meta: {
+      name: deviceName,
+      link,
+      usage,
+      description,
+      releaseYear,
+      acquireYear,
+    },
+  },
+}: ComputerProps) {
   return (
     <div>
       {/* Name of the computer */}
-      <HighlightedLink
-        link={meta.link}
-        highlight="text-blue-400 font-bold text-lg"
-      >
-        {meta.name}
+      <HighlightedLink link={link} highlight="text-blue-400 font-bold text-lg">
+        {deviceName}
       </HighlightedLink>
 
       {/* Stick the data into a grid */}
@@ -22,23 +36,23 @@ export default function Computer({ computer: { specs, meta } }: ComputerProps) {
         <div>
           {/* Operating System */}
           <div className="flex flex-row">
-            <specs.os.icon className="mr-1 mt-1" />
-            <span>{specs.os.name}</span>
+            <Icon className="mr-1 mt-1" />
+            <span>{osName}</span>
           </div>
           {/* CPU */}
           <div className="flex flex-row">
             <GoCpu className="mr-1 mt-1" />
-            <span>{specs.cpu}</span>
+            <span>{cpu}</span>
           </div>
           {/* GPU */}
           <div className="flex flex-row">
             <BsGpuCard className="mr-1 mt-1" />
-            <span>{specs.gpu}</span>
+            <span>{gpu}</span>
           </div>
           {/* RAM */}
           <div className="flex flex-row">
             <FaMemory className="mr-1 mt-1" />
-            <span>{specs.ram}</span>
+            <span>{ram}</span>
           </div>
         </div>
 
@@ -47,23 +61,23 @@ export default function Computer({ computer: { specs, meta } }: ComputerProps) {
           {/* Usage */}
           <div>
             <span className="italic">Usage: </span>
-            {meta.usage}
+            {usage}
           </div>
           {/* Release */}
           <div>
             <span className="italic">Release: </span>
-            {meta.releaseYear}
+            {releaseYear}
           </div>
           {/* Acquired */}
           <div>
             <span className="italic">Acquired: </span>
-            {meta.acquireYear}
+            {acquireYear}
           </div>
           {/* Description */}
           {/* TODO: figure out how to make this prettier, maybe disclosure? */}
           <div>
             <span className="italic">Description:</span>
-            {meta.description}
+            {description}
           </div>
         </div>
       </div>
