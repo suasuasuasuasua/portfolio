@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { CiCircleChevUp } from "react-icons/ci";
 
 // Define the header elements as well as the root path and label
 const headers = {
@@ -38,16 +39,20 @@ export default function Header() {
           {/* Map each of the header entries to a link */}
           {Object.entries(headers).map(([key, value]) => (
             <li key={key}>
-              <Link
-                href={`${value.root}`}
-                onClick={() => {
-                  console.log(value.root);
-                  setActiveHeader(value.root);
-                }}
-                className={`font-sans text-sm hover:underline hover:underline-offset-4 ${activeHeader === value.root ? "dot-active" : ""}`}
-              >
-                {value.label}
-              </Link>
+              <div className="flex flex-col items-center">
+                <Link
+                  href={`${value.root}`}
+                  onClick={() => {
+                    setActiveHeader(value.root);
+                  }}
+                  className="hover:underline hover:underline-offset-4"
+                >
+                  {value.label}
+                </Link>
+                <CiCircleChevUp
+                  className={`${activeHeader === value.root ? "block" : "hidden"}`}
+                />
+              </div>
             </li>
           ))}
         </ul>
