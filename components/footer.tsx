@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiMatrix, SiProton } from "react-icons/si";
@@ -37,14 +38,14 @@ export default function Footer() {
       {/* Row 2 - GitHub Plug */}
       <p className="gap-2 text-center text-sm">
         <span className="mx-1">Made with ❤️ by</span>
-        <a
+        <Link
           className="hover:underline hover:underline-offset-4"
           href="https://github.com/suasuasuasuasua/"
           target="_blank"
           rel="noopener noreferrer"
         >
           suasuasuasuasua
-        </a>
+        </Link>
       </p>
     </footer>
   );
@@ -52,13 +53,13 @@ export default function Footer() {
 
 function FooterIcon({ icon: Icon, link }: { icon: IconType; link: string }) {
   return (
-    <a
+    <Link
       className="flex items-center gap-2"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
       <Icon />
-    </a>
+    </Link>
   );
 }
