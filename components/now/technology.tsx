@@ -1,4 +1,4 @@
-import Link from "next/link";
+import HighlightedLink from "@/components/link";
 
 type Props = {
   name: string;
@@ -9,14 +9,9 @@ type Props = {
 export default function Technology({ name, description, link }: Props) {
   return (
     <div className="space-x-1">
-      <Link
-        href={link}
-        className="text-blue-200 underline underline-offset-2"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <HighlightedLink link={link} highlight="text-orange-400">
         {name}
-      </Link>
+      </HighlightedLink>
       <span>
         - <span className="italic">{description}</span>{" "}
       </span>
