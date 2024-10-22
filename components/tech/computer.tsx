@@ -30,7 +30,6 @@ export default function Computer({
       </HighlightedLink>
 
       {/* Stick the data into a grid */}
-      {/* <div className="grid gap-4 md:grid-cols-2"> */}
       <div>
         {/* Specs */}
         <div>

@@ -1,6 +1,6 @@
 import { ComputerProps, Usage } from "@/types/computer";
 import { FaApple } from "react-icons/fa";
-import { SiNixos, SiProxmox, SiWindows } from "react-icons/si";
+import { SiNixos, SiProxmox, SiWindows11 } from "react-icons/si";
 
 export const computers: ComputerProps = {
   macbook: {
@@ -103,7 +103,7 @@ Linux and how to value technology.
   legion: {
     specs: {
       os: {
-        icon: SiWindows,
+        icon: SiWindows11,
         name: "Windows 11",
       },
       cpu: "i7-9900K (8 core, 16 threads, 3.6GHz)",
