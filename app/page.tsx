@@ -26,12 +26,12 @@ export default function Home() {
         <div>
           <p className="font-semibold">Albums</p>
           <ul>
-            {albums.map(album => (
-              <li key={album.link}>
+            {Object.entries(albums).map(([key, value]) => (
+              <li key={key}>
                 <Album
-                  title={album.title}
-                  artist={album.artist}
-                  link={album.link}
+                  title={value.title}
+                  artist={value.artist}
+                  link={value.link}
                 />
               </li>
             ))}
@@ -42,12 +42,12 @@ export default function Home() {
         <div>
           <p className="font-semibold">Books</p>
           <ul>
-            {books.map(book => (
-              <li key={book.link}>
+            {Object.entries(books).map(([key, value]) => (
+              <li key={key}>
                 <Book
-                  title={book.title}
-                  author={book.author}
-                  link={book.link}
+                  title={value.title}
+                  author={value.author}
+                  link={value.link}
                 />
               </li>
             ))}
@@ -58,12 +58,12 @@ export default function Home() {
         <div>
           <p className="font-semibold">Current Technologies</p>
           <ul>
-            {technologies.map(tech => (
-              <li key={tech.link}>
+            {Object.entries(technologies).map(([key, value]) => (
+              <li key={key}>
                 <Technology
-                  name={tech.name}
-                  description={tech.description}
-                  link={tech.link}
+                  name={value.name}
+                  description={value.description}
+                  link={value.link}
                 />
               </li>
             ))}
@@ -74,9 +74,13 @@ export default function Home() {
         <div>
           <p className="font-semibold">Operating Systems</p>
           <ul>
-            {os.map(os => (
-              <li key={os.link}>
-                <OperatingSystem name={os.name} icon={os.icon} link={os.link} />
+            {Object.entries(os).map(([key, value]) => (
+              <li key={key}>
+                <OperatingSystem
+                  name={value.name}
+                  icon={value.icon}
+                  link={value.link}
+                />
               </li>
             ))}
           </ul>
