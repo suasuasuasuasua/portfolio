@@ -1,4 +1,4 @@
-import HighlightedLink from "../link";
+import HighlightedLink from "@/components/link";
 import { ComputerProps } from "@/types/computer";
 import { BsGpuCard } from "react-icons/bs";
 import { FaMemory } from "react-icons/fa";
