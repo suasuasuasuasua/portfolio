@@ -19,39 +19,36 @@ export default function TechPage() {
         </ul>
       </div>
       {/* Software Section */}
-      <div>
-        {/* Group the Development and CLi */}
+      <div className="space-y-4">
+        {/* Development Section */}
         <div>
-          {/* Development Section */}
-          <div>
-            <p className="text-lg font-bold">Development</p>
-            <ul>
-              {Object.entries(devSoftware).map(([key, value]) => (
-                <li key={key} className="mb-2">
-                  <Software software={value} />
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* CLI Development Section */}
-          <div>
-            <p className="text-lg font-bold">CLI</p>
-            <ul>
-              {Object.entries(cliSoftware).map(([key, value]) => (
-                <li key={key} className="mb-4">
-                  <CLISoftware software={value} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="text-lg font-bold">Development</p>
+          <ul className="space-y-2">
+            {Object.entries(devSoftware).map(([key, value]) => (
+              <li key={key}>
+                <Software software={value} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* CLI Development Section */}
+        <div>
+          <p className="text-lg font-bold">CLI</p>
+          <ul className="space-y-2">
+            {Object.entries(cliSoftware).map(([key, value]) => (
+              <li key={key}>
+                <CLISoftware software={value} />
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* General Software */}
         <div>
           <p className="text-lg font-bold">General</p>
-          <ul>
+          <ul className="space-y-2">
             {Object.entries(genSoftware).map(([key, value]) => (
-              <li key={key} className="mb-4">
+              <li key={key}>
                 <Software software={value} />
               </li>
             ))}
