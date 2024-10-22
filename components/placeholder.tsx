@@ -21,7 +21,6 @@ export default function Placeholder() {
         alt="plink"
         width={width}
         height={height}
-        layout={"responsive"}
         unoptimized={true}
         priority
         className="max-w-xs md:max-w-lg lg:max-w-xl"
