@@ -16,7 +16,7 @@ export default function Computer({
       name: deviceName,
       link,
       usage,
-      description,
+      // description,
       releaseYear,
       acquireYear,
     },
@@ -75,10 +75,10 @@ export default function Computer({
           </div>
           {/* Description */}
           {/* TODO: figure out how to make this prettier, maybe disclosure? */}
-          <div>
-            <span className="italic">Description:</span>
-            {description}
-          </div>
+          {/* <div> */}
+          {/*   <span className="italic">Description:</span> */}
+          {/*   {description} */}
+          {/* </div> */}
         </div>
       </div>
     </div>
