@@ -7,18 +7,20 @@ export function Software({
   return (
     <div>
       {/* Name */}
-      <div className="flex flex-row space-x-1">
-        <Icon className="mt-1" />
-        <HighlightedLink link={link} highlight="text-blue-400 font-bold">
-          {name}
-        </HighlightedLink>
+      <div className="flex flex-col space-x-1 md:flex-row">
+        <span className="inline-flex space-x-1">
+          <Icon className="mt-1" />
+          <HighlightedLink link={link} highlight="text-blue-400 font-bold">
+            {name}
+          </HighlightedLink>
+        </span>
+        {/* Platform */}
+        <ul className="mt-1 flex flex-row space-x-1">
+          {platforms.map((Platform, i) => (
+            <li key={i}>{<Platform />}</li>
+          ))}
+        </ul>
       </div>
-      {/* Platform */}
-      <ul className="mt-1 flex flex-row space-x-1">
-        {platforms.map((Platform, i) => (
-          <li key={i}>{<Platform />}</li>
-        ))}
-      </ul>
       {/* Description */}
       <p className="text-sm italic">{description}</p>
     </div>
