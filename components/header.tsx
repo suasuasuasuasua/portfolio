@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { CiCircleChevUp } from "react-icons/ci";
 
 // Define the header elements as well as the root path and label
@@ -18,7 +18,7 @@ const headers = {
 const imageSize = 28;
 
 export default function Header() {
-  const [activeHeader, setActiveHeader] = useState(headers.home.root);
+  const pathname = usePathname();
 
   return (
     <header>
@@ -42,15 +42,12 @@ export default function Header() {
               <div className="flex flex-col items-center">
                 <Link
                   href={`${value.root}`}
-                  onClick={() => {
-                    setActiveHeader(value.root);
-                  }}
                   className="hover:underline hover:underline-offset-4"
                 >
                   {value.label}
                 </Link>
                 <CiCircleChevUp
-                  className={`${activeHeader === value.root ? "block" : "hidden"}`}
+                  className={`${pathname === value.root ? "block" : "hidden"}`}
                 />
               </div>
             </li>
