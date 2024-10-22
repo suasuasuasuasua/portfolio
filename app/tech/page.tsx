@@ -5,7 +5,7 @@ import { Software, CLISoftware } from "@/components/tech/software";
 
 export default function TechPage() {
   return (
-    <div className="mx-auto flex flex-row space-x-10">
+    <div className="mx-auto flex w-11/12 flex-row justify-center space-x-8 md:w-9/12 md:space-x-16 lg:w-7/12 lg:space-x-24">
       {/* Computers Section */}
       <div>
         <p className="text-xl font-bold">Computers</p>
@@ -31,6 +31,7 @@ export default function TechPage() {
             ))}
           </ul>
         </div>
+
         {/* CLI Development Section */}
         <div>
           <p className="text-lg font-bold">CLI</p>

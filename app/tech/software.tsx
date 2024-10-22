@@ -102,7 +102,7 @@ export const genSoftware: SoftwareProps = {
     name: "Safari",
     icon: FaSafari,
     description: "Default privacy-first and optimized macOS web browser",
-    link: "https://www.mozilla.org/en-US/firefox/",
+    link: "https://www.apple.com/safari/",
     platforms: [FaApple],
   },
   obsidian: {
