@@ -85,21 +85,3 @@ export default function Home() {
     </div>
   );
 }
-
-// {/* Current Book */ }
-// <div>
-//   <p className="font-semibold">Books</p>
-//   {books.map(book => book)}
-// </div>
-//
-// {/* Current Technologies */ }
-// <div>
-//   <p className="font-semibold">Technologies</p>
-//   {technologies.map(tech => tech)}
-// </div>
-//
-// {/* Current OS */ }
-// <div>
-//   <p className="font-semibold">Operating Systems</p>
-//   {os.map(os => os)}
-// </div>
