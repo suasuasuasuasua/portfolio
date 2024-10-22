@@ -1,3 +1,4 @@
+import HighlightedLink from "@/components/link";
 import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiMatrix, SiProton } from "react-icons/si";
@@ -23,9 +24,9 @@ const socialIcons = {
 
 export default function Footer() {
   return (
-    <footer className=" mt-auto space-y-2">
+    <footer className="mt-auto space-y-2">
       {/* Row 1 - List of socials */}
-      <ul className="flex flex-row space-x-10 justify-center">
+      <ul className="flex flex-row justify-center space-x-10">
         {/* Map each of the social entries to a icon */}
         {Object.entries(socialIcons).map(([key, value]) => (
           <li key={key}>
@@ -35,16 +36,14 @@ export default function Footer() {
       </ul>
 
       {/* Row 2 - GitHub Plug */}
-      <p className="text-center text-sm gap-2">
+      <p className="gap-2 text-center text-sm">
         <span className="mx-1">Made with ❤️ by</span>
-        <a
-          className="hover:underline hover:underline-offset-4"
-          href="https://github.com/suasuasuasuasua/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <HighlightedLink
+          link="https://github.com/suasuasuasuasua/"
+          highlight=""
         >
           suasuasuasuasua
-        </a>
+        </HighlightedLink>
       </p>
     </footer>
   );
@@ -52,13 +51,8 @@ export default function Footer() {
 
 function FooterIcon({ icon: Icon, link }: { icon: IconType; link: string }) {
   return (
-    <a
-      className="flex items-center gap-2"
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <HighlightedLink link={link} highlight="">
       <Icon />
-    </a>
+    </HighlightedLink>
   );
 }
