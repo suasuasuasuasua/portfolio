@@ -12,13 +12,13 @@ export function Software({
         <HighlightedLink link={link} highlight="text-blue-400 font-bold">
           {name}
         </HighlightedLink>
-        {/* Platform */}
-        <ul className="mt-1 flex flex-row space-x-1">
-          {platforms.map((Platform, i) => (
-            <li key={i}>{<Platform />}</li>
-          ))}
-        </ul>
       </div>
+      {/* Platform */}
+      <ul className="mt-1 flex flex-row space-x-1">
+        {platforms.map((Platform, i) => (
+          <li key={i}>{<Platform />}</li>
+        ))}
+      </ul>
       {/* Description */}
       <p className="text-sm italic">{description}</p>
     </div>
@@ -35,13 +35,13 @@ export function CLISoftware({
         <HighlightedLink link={link} highlight="text-blue-400 font-bold">
           {name}
         </HighlightedLink>
-        {/* Platform */}
-        <ul className="mt-1 flex flex-row space-x-1">
-          {platforms.map((Platform, i) => (
-            <li key={i}>{<Platform />}</li>
-          ))}
-        </ul>
       </div>
+      {/* Platform */}
+      <ul className="mt-1 flex flex-row space-x-1">
+        {platforms.map((Platform, i) => (
+          <li key={i}>{<Platform />}</li>
+        ))}
+      </ul>
       {/* Description */}
       <p className="text-sm italic">{description}</p>
     </div>
