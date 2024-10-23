@@ -15,7 +15,7 @@ export function Software({
           </HighlightedLink>
         </span>
         {/* Platform */}
-        <ul className="mt-1 flex flex-row space-x-1">
+        <ul className="mt-1 inline-flex space-x-1">
           {platforms.map((Platform, i) => (
             <li key={i}>{<Platform />}</li>
           ))}
@@ -38,7 +38,7 @@ export function CLISoftware({
           {name}
         </HighlightedLink>
         {/* Platform */}
-        <ul className="mt-1 flex flex-row space-x-1">
+        <ul className="mt-1 inline-flex space-x-1">
           {platforms.map((Platform, i) => (
             <li key={i}>{<Platform />}</li>
           ))}

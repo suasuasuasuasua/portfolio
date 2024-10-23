@@ -35,7 +35,7 @@ export default function Header() {
         </div>
 
         {/* List of Headers */}
-        <ul className="flex flex-row space-x-4 sm:space-x-8 lg:space-x-12">
+        <ul className="inline-flex space-x-4 sm:space-x-8 lg:space-x-12">
           {/* Map each of the header entries to a link */}
           {Object.entries(headers).map(([key, value]) => (
             <li key={key}>

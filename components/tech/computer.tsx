@@ -32,26 +32,26 @@ export default function Computer({
       {/* Stick the data into a grid */}
       <div>
         {/* Specs */}
-        <div>
+        <div className="flex flex-col">
           {/* Operating System */}
-          <div className="flex flex-row">
+          <div className="inline-flex">
             <Icon className="mr-1 mt-1" />
-            <span>{osName}</span>
+            {osName}
           </div>
           {/* CPU */}
-          <div className="flex flex-row">
+          <div className="inline-flex">
             <GoCpu className="mr-1 mt-1" />
-            <span>{cpu}</span>
+            {cpu}
           </div>
           {/* GPU */}
-          <div className="flex flex-row">
+          <div className="inline-flex">
             <BsGpuCard className="mr-1 mt-1" />
-            <span>{gpu}</span>
+            {gpu}
           </div>
           {/* RAM */}
-          <div className="flex flex-row">
+          <div className="inline-flex">
             <FaMemory className="mr-1 mt-1" />
-            <span>{ram}</span>
+            {ram}
           </div>
         </div>
 
