@@ -6,5 +6,9 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BlogPosts />;
+  return (
+    <div className="mx-auto w-11/12">
+      <BlogPosts />
+    </div>
+  );
 }

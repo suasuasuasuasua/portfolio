@@ -11,7 +11,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(props: Props) {
+  const params = await props.params;
   const post = getBlogPosts().find(post => post.slug === params.slug);
   if (!post) {
     return;
@@ -51,7 +57,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function Blog({ params }) {
+export default async function Blog(props: Props) {
+  const params = await props.params;
   const post = getBlogPosts().find(post => post.slug === params.slug);
 
   if (!post) {
@@ -59,7 +66,7 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section>
+    <section className="mx-auto w-11/12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
