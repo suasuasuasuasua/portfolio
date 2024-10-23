@@ -54,7 +54,7 @@ exhaustion has set in on me and now I'm ready to just create, work, and play.
     specs: {
       os: {
         icon: SiNixos,
-        name: "NixOS",
+        name: "NixOS 24.11 (unstable)",
       },
       cpu: "i5-1135G7 (4-core, 8 threads, 2.40 GHz)",
       gpu: "Intel Iris Xe Graphics",
@@ -150,7 +150,7 @@ rocking Ubuntu with Nix.
     specs: {
       os: {
         icon: SiNixos,
-        name: "NixOS",
+        name: "NixOS 24.11 (unstable)",
       },
       cpu: "i5-8600T (6-core, 6 threads, 3.70 GHz)",
       gpu: "Intel UHD Graphics 630",
@@ -181,7 +181,7 @@ it is to replug the display port cable or reboot the computer.
     specs: {
       os: {
         icon: SiProxmox,
-        name: "Proxmox",
+        name: "Proxmox 8.2",
       },
       cpu: "i7-10750H (6 core, 12 threads, 2.6GHz)",
       gpu: "GeForce RTX 2060 (notebook version)",
