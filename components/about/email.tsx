@@ -8,7 +8,7 @@ type Props = {
 };
 export default function Email({ name, link, icon: Icon }: Props) {
   return (
-    <span className="inline-flex flex-row space-x-1">
+    <span className="inline-flex space-x-1">
       <Icon className="mt-1" />
       <HighlightedLink link={link} highlight="text-blue-400">
         {name}
