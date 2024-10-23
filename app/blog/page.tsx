@@ -1,5 +1,10 @@
-import Placeholder from "@/components/placeholder";
+import { BlogPosts } from "@/components/blog/posts";
 
-export default function BlogPage() {
-  return <Placeholder />;
+export const metadata = {
+  title: "blog",
+  description: "read my blog",
+};
+
+export default function Page() {
+  return <BlogPosts />;
 }
