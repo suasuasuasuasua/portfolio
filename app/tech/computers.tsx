@@ -11,7 +11,7 @@ export const computers: ComputerProps = {
       },
       cpu: "M3 Max 14 Core (10 performance, 4 efficiency)",
       gpu: "M3 Max 18 Core",
-      ram: "36.0GB Unified RAM",
+      ram: "36.00GB Unified RAM",
     },
     meta: {
       name: "Macbook Pro M3 Max",
@@ -58,7 +58,7 @@ exhaustion has set in on me and now I'm ready to just create, work, and play.
       },
       cpu: "i5-1135G7 (4-core, 8 threads, 2.40 GHz)",
       gpu: "Intel Iris Xe Graphics",
-      ram: "8.0GB DDR4 RAM",
+      ram: "8.00GB DDR4 RAM",
     },
     meta: {
       name: "Acer Spin 713-3w",
@@ -108,7 +108,7 @@ Linux and how to value technology.
       },
       cpu: "i7-9900K (8 core, 16 threads, 3.6GHz)",
       gpu: "GeForce RTX 2080",
-      ram: "36.0GB DDR4 RAM (16.00 DDR3 RAM stock)",
+      ram: "36.00GB DDR4 RAM (16.00 DDR3 RAM stock)",
     },
     meta: {
       name: "Lenovo Legion T730-28ICO",
@@ -154,7 +154,7 @@ rocking Ubuntu with Nix.
       },
       cpu: "i5-8600T (6-core, 6 threads, 3.70 GHz)",
       gpu: "Intel UHD Graphics 630",
-      ram: "16.0GB DDR4 RAM",
+      ram: "16.00GB DDR4 RAM",
     },
     meta: {
       name: "OptiPlex 5060M",
@@ -185,7 +185,7 @@ it is to replug the display port cable or reboot the computer.
       },
       cpu: "i7-10750H (6 core, 12 threads, 2.6GHz)",
       gpu: "GeForce RTX 2060 (notebook version)",
-      ram: "16.0GB DDR4 RAM",
+      ram: "16.00GB DDR4 RAM",
     },
     meta: {
       name: "MSI Raider GE75",
