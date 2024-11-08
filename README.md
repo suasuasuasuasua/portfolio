@@ -25,7 +25,7 @@ React.
 ## Project Workflow
 
 Currently, I have the production website at [sua.sh](https://sua.sh) and the
-preview website at [sua-dev.vercel.app](https://sua-dev.vercel.app). The
+preview website at [sua-drafts.vercel.app](https://sua-drafts.vercel.app). The
 production website is tied directly to
 [main](https://github.com/suasuasuasuasua/personal-website/tree/main), while the
 preview website is tied to
@@ -61,9 +61,10 @@ gitGraph
    commit
 ```
 
-TLDR; go to [sua-dev.vercel.app](https://sua-dev.vercel.app) for the latest
-changes, but you will need to sign into [Vercel](https://vercel.com). Or, go to
-the [staging](https://github.com/suasuasuasuasua/personal-website/tree/staging)
+TLDR; go to [sua-drafts.vercel.app](https://sua-drafts.vercel.app) for the
+latest changes, but you will need to sign into [Vercel](https://vercel.com). Or,
+go to the
+[staging](https://github.com/suasuasuasuasua/personal-website/tree/staging)
 branch, pull the changes, and run `pnpm dev` to start up a local development web
 server.
 
