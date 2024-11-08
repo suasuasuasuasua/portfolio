@@ -26,7 +26,7 @@ export default function Header() {
         {/* Header Icon */}
         <div className="flex lg:flex-1">
           <Image
-            src="/penguin.png"
+            src="/penguin.webp"
             alt="fat linux penguin"
             width={imageSize}
             height={imageSize}
