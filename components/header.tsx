@@ -1,17 +1,28 @@
 "use client";
 
+import HeaderEntry from "@/types/headerEntry";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiCircleChevUp } from "react-icons/ci";
 
 // Define the header elements as well as the root path and label
-const headers = {
-  home: { root: "/", label: "Home" },
-  blog: { root: "/blog", label: "Blog" },
-  portfolio: { root: "/portfolio", label: "Portfolio" },
-  tech: { root: "/tech", label: "Tech" },
-  about: { root: "/about", label: "About" },
+const headers: HeaderEntry = {
+  "/": {
+    label: "Home",
+  },
+  "/blog": {
+    label: "Blog",
+  },
+  "/portfolio": {
+    label: "Portfolio",
+  },
+  "/tech": {
+    label: "Tech",
+  },
+  "/about": {
+    label: "About",
+  },
 };
 
 // The size of the icon
@@ -41,13 +52,13 @@ export default function Header() {
             <li key={key}>
               <div className="flex flex-col items-center">
                 <Link
-                  href={`${value.root}`}
+                  href={`${key}`}
                   className="hover:underline hover:underline-offset-4"
                 >
                   {value.label}
                 </Link>
                 <CiCircleChevUp
-                  className={`${pathname === value.root ? "block" : "hidden"}`}
+                  className={`${pathname === key ? "block" : "hidden"}`}
                 />
               </div>
             </li>
