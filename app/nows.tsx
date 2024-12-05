@@ -31,15 +31,17 @@ export const albums: AlbumProps = {
 };
 
 export const books: BookProps = {
-  aliasGrace: {
-    title: "Alias Grace",
-    author: "Margaret Atwood",
-    link: "https://isbndb.com/book/9780385490443",
+  "The Old Man and The Sea": {
+    title: "The Old Man and The Sea",
+    author: "Ernest Hemingway",
+    bookLink: "https://isbndb.com/book/9780684801223",
+    authorLink: "https://en.wikipedia.org/wiki/Ernest_Hemingway",
   },
-  screwtapeLetters: {
-    title: "The Screwtape Letters",
-    author: "C.S. Lewis",
-    link: "https://isbndb.com/book/9780060652937",
+  "Of Mice and Men": {
+    title: "Of Mice and Men",
+    author: "John Steinbeck",
+    bookLink: "https://isbndb.com/book/9780142000670",
+    authorLink: "https://en.wikipedia.org/wiki/John_Steinbeck",
   },
 };
 
