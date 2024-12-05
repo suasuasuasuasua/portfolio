@@ -8,25 +8,30 @@ import { FaApple } from "react-icons/fa";
 import { SiNixos } from "react-icons/si";
 
 export const albums: AlbumProps = {
-  loseYourself: {
+  "Lose Yourself": {
     title: "Lose Yourself",
     artist: "Kiss of Life",
-    link: "https://open.spotify.com/album/4eguh1dJUXRh0IMiLKRwab",
+    albumLink: "https://open.spotify.com/album/4eguh1dJUXRh0IMiLKRwab",
+    artistLink:
+      "https://open.spotify.com/artist/4TEK9tIkcoxib4GxT3O4ky?si=RM2MZ7fSREG0xgWXm5v2Dg",
   },
-  bewitched: {
+  Bewitched: {
     title: "Bewitched",
     artist: "Laufey",
-    link: "https://open.spotify.com/album/1rpCHilZQkw84A3Y9czvMO",
+    albumLink: "https://open.spotify.com/album/1rpCHilZQkw84A3Y9czvMO",
+    artistLink: "https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO",
   },
-  pianoConceroNo2: {
+  "Piano Concerto No. 2 in C Minor, Op. 18": {
     title: "Piano Concerto No. 2 in C Minor, Op. 18",
     artist: "Sergei Rachmaninoff",
-    link: "https://open.spotify.com/album/5lVqgXqdoIH3W1wUM2hzPx",
+    albumLink: "https://open.spotify.com/album/5lVqgXqdoIH3W1wUM2hzPx",
+    artistLink: "https://open.spotify.com/artist/0Kekt6CKSo0m5mivKcoH51",
   },
-  telos: {
+  Telos: {
     title: "Telos",
     artist: "Zedd",
-    link: "https://open.spotify.com/album/5V7WoYwRXtheRjhOjgUeR5",
+    albumLink: "https://open.spotify.com/album/5V7WoYwRXtheRjhOjgUeR5",
+    artistLink: "https://open.spotify.com/artist/2qxJFvFYMEDqd7ui6kSAcq",
   },
 };
 

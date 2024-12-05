@@ -31,7 +31,8 @@ export default function Home() {
                 <Album
                   title={value.title}
                   artist={value.artist}
-                  link={value.link}
+                  albumLink={value.albumLink}
+                  artistLink={value.artistLink}
                 />
               </li>
             ))}
