@@ -108,7 +108,7 @@ Linux and how to value technology.
       },
       cpu: "i7-9900K (8 core, 16 threads, 3.6GHz)",
       gpu: "GeForce RTX 2080",
-      ram: "36.00GB DDR4 RAM (16.00 DDR3 RAM stock)",
+      ram: "36.00GB DDR4 RAM (16.00 DDR4 RAM stock)",
     },
     meta: {
       name: "Lenovo Legion T730-28ICO",
