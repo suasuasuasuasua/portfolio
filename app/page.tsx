@@ -47,7 +47,8 @@ export default function Home() {
                 <Book
                   title={value.title}
                   author={value.author}
-                  link={value.link}
+                  bookLink={value.bookLink}
+                  authorLink={value.authorLink}
                 />
               </li>
             ))}
