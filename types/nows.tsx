@@ -4,7 +4,8 @@ export interface AlbumProps {
   [key: string]: {
     title: string;
     artist: string;
-    link: string;
+    albumLink: string;
+    artistLink?: string;
   };
 }
 
