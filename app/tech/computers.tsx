@@ -1,6 +1,6 @@
 import { ComputerProps, Usage } from "@/types/computer";
 import { FaApple } from "react-icons/fa";
-import { SiNixos, SiProxmox, SiWindows11 } from "react-icons/si";
+import { SiNixos, SiWindows11 } from "react-icons/si";
 
 export const computers: ComputerProps = {
   macbook: {
@@ -180,8 +180,8 @@ it is to replug the display port cable or reboot the computer.
   raider: {
     specs: {
       os: {
-        icon: SiProxmox,
-        name: "Proxmox 8.2",
+        icon: SiNixos,
+        name: "NixOS 24.11",
       },
       cpu: "i7-10750H (6 core, 12 threads, 2.6GHz)",
       gpu: "GeForce RTX 2060 (notebook version)",
