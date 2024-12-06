@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 0.4.0 (2024-12-05)
+
+### Feat
+
+- added section for various devices
+- added links for the artist on the now page
+- added The Old Man and The Sea
+
+### Fix
+
+- **updated-computer-descriptions**: descriptions are now more concise and the
+  computers list vertically
+- bumped nixos version to 25.05
+- updated msi raider operating system
+- changed lenovo legion ram type
+- **app/tech/page.tsx**: added bottom padding to the tech content
+- converted existing assets to webp
+- **app/about/page.tsx**: put the emails on the about page on same row
+- **app/tech/computers.tsx**: added two floating points for RAM on computers
+  page
+- **app/tech/computers.tsx**: added versioning for nixos and proxmox
+
 ## 0.3.0 (2024-10-22)
 
 ### Feat
