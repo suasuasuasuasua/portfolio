@@ -5,14 +5,13 @@ import { Software, CLISoftware } from "@/components/tech/software";
 
 export default function TechPage() {
   return (
-    <div className="mx-auto flex w-11/12 flex-row justify-center space-x-8 pb-6 md:w-9/12 md:space-x-16 lg:w-7/12 lg:space-x-24">
+    <div className="mx-auto flex w-11/12 flex-col justify-center space-y-4 lg:w-8/12">
       {/* Computers Section */}
       <div>
-        <p className="text-xl font-bold">Computers</p>
-
-        <ul>
+        <p className="text-xl">Computers</p>
+        <ul className="flex flex-col space-y-2">
           {Object.entries(computers).map(([key, value]) => (
-            <li key={key} className="mb-4">
+            <li key={key}>
               <Computer computer={value} />
             </li>
           ))}
