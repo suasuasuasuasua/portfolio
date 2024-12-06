@@ -1,7 +1,14 @@
 import computers from "@/app/tech/computers";
+import {
+  desktopAccessories,
+  wearables,
+  devices,
+  headphones,
+} from "@/app/tech/devices";
 import { devSoftware, cliSoftware, genSoftware } from "@/app/tech/software";
 import Computer from "@/components/tech/computer";
-import { Software, CLISoftware } from "@/components/tech/software";
+import Device from "@/components/tech/devices";
+import { Software } from "@/components/tech/software";
 
 export default function TechPage() {
   return (
@@ -17,43 +24,94 @@ export default function TechPage() {
           ))}
         </ul>
       </div>
-      {/* Software Section */}
-      <div className="space-y-4">
-        {/* Development Section */}
+
+      {/* Devices Section */}
+      <div className="space-y-2">
+        <p className="text-xl">Gadgets</p>
+
+        {/* Desktop Accessories */}
         <div>
-          <p className="text-lg font-bold">Development</p>
-          <ul className="space-y-2">
-            {Object.entries(devSoftware).map(([key, value]) => (
+          <p className="text-lg">Desktop Accessories</p>
+          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+            {Object.entries(desktopAccessories).map(([key, value]) => (
               <li key={key}>
-                <Software software={value} />
+                <Device device={value} />
               </li>
             ))}
           </ul>
         </div>
 
-        {/* CLI Development Section */}
+        {/* Devices */}
         <div>
-          <p className="text-lg font-bold">CLI</p>
-          <ul className="space-y-2">
-            {Object.entries(cliSoftware).map(([key, value]) => (
+          <p className="text-lg">Devices</p>
+          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+            {Object.entries(devices).map(([key, value]) => (
               <li key={key}>
-                <CLISoftware software={value} />
+                <Device device={value} />
               </li>
             ))}
           </ul>
         </div>
 
-        {/* General Software */}
+        {/* Wearables */}
         <div>
-          <p className="text-lg font-bold">General</p>
-          <ul className="space-y-2">
-            {Object.entries(genSoftware).map(([key, value]) => (
+          <p className="text-lg">Wearables</p>
+          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+            {Object.entries(wearables).map(([key, value]) => (
               <li key={key}>
-                <Software software={value} />
+                <Device device={value} />
               </li>
             ))}
           </ul>
         </div>
+
+        {/* Headphones */}
+        <div>
+          <p className="text-lg">Headphones</p>
+          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+            {Object.entries(headphones).map(([key, value]) => (
+              <li key={key}>
+                <Device device={value} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* Development Section */}
+      <div>
+        <p className="text-xl">Development</p>
+        <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          {Object.entries(devSoftware).map(([key, value]) => (
+            <li key={key}>
+              <Software software={value} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* CLI Development Section */}
+      <div>
+        <p className="text-xl">CLI</p>
+        <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          {Object.entries(cliSoftware).map(([key, value]) => (
+            <li key={key}>
+              <Software software={value} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* General Software */}
+      <div>
+        <p className="text-xl">General</p>
+
+        <ul className="flex flex-col sm:space-x-4 md:flex-row md:space-x-8 lg:flex-row">
+          {Object.entries(genSoftware).map(([key, value]) => (
+            <li key={key}>
+              <Software software={value} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
