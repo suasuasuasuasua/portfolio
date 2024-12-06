@@ -1,4 +1,4 @@
-import { CLIProps, SoftwareProps } from "@/types/software";
+import { SoftwareProps } from "@/types/software";
 import { FaApple, FaFirefox, FaLinux, FaSafari } from "react-icons/fa";
 import {
   SiAlacritty,
@@ -51,7 +51,7 @@ export const devSoftware: SoftwareProps = {
   },
 };
 
-export const cliSoftware: CLIProps = {
+export const cliSoftware: SoftwareProps = {
   nix: {
     name: "nix",
     description: "Declarative functional package manager",
