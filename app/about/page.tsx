@@ -13,7 +13,7 @@ export default function AboutPage() {
           Contact
         </div>
         <p>Interested in working with me?</p>
-        <ul>
+        <ul className="inline-flex space-x-4">
           {Object.entries(emails).map(([key, value]) => (
             <li key={key}>
               <Email name={value.name} link={value.link} icon={value.icon} />

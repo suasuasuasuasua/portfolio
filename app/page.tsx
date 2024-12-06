@@ -31,7 +31,8 @@ export default function Home() {
                 <Album
                   title={value.title}
                   artist={value.artist}
-                  link={value.link}
+                  albumLink={value.albumLink}
+                  artistLink={value.artistLink}
                 />
               </li>
             ))}
@@ -47,7 +48,8 @@ export default function Home() {
                 <Book
                   title={value.title}
                   author={value.author}
-                  link={value.link}
+                  bookLink={value.bookLink}
+                  authorLink={value.authorLink}
                 />
               </li>
             ))}

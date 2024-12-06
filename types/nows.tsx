@@ -4,7 +4,8 @@ export interface AlbumProps {
   [key: string]: {
     title: string;
     artist: string;
-    link: string;
+    albumLink: string;
+    artistLink?: string;
   };
 }
 
@@ -12,7 +13,8 @@ export interface BookProps {
   [key: string]: {
     title: string;
     author: string;
-    link: string;
+    bookLink: string;
+    authorLink?: string;
   };
 }
 

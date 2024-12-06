@@ -17,7 +17,7 @@ export default function Placeholder() {
 
       {/* plink :) */}
       <Image
-        src="/plink-wide-cat.gif"
+        src="/plink-wide-cat.webp"
         alt="plink"
         width={width}
         height={height}
