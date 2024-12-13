@@ -26,6 +26,10 @@
     };
   };
 
+  processes = {
+    nextjs.exec = "pnpm dev";
+  };
+
   devcontainer = {
     enable = true;
     settings = {
@@ -34,7 +38,7 @@
     };
   };
 
-  pre-commit.hooks = {
+  git-hooks.hooks = {
     # Nix
     alejandra.enable = true;
     deadnix.enable = true;
