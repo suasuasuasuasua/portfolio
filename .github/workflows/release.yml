@@ -1,6 +1,5 @@
 name: Release
 
-# Allow for releases
 on:
   push:
     branches:
@@ -11,7 +10,8 @@ jobs:
   bump-version:
     if: ${{ startsWith(github.event.head_commit.message, 'bump:') }}
     runs-on: ubuntu-latest
-    name: "Bump version and create changelog with commitizen"
+    name: "Release version from version bump"
+    # Allow for releases and pull requests
     permissions:
       contents: write
       pull-requests: write
