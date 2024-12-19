@@ -55,8 +55,6 @@ jobs:
         with:
           branch: bump-version-${{ steps.cz.outputs.version }}
           title: Bump version ${{ steps.cz.outputs.version }}
-          committer:
-            "${{ steps.gpg.outputs.name }} <${{ steps.gpg.outputs.email }}>"
       # add tag manually, since the PR action does not push tags
       - run: |
           git push origin --tags
