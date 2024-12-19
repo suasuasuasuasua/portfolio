@@ -1,3 +1,5 @@
+# CHANGELOG
+
 ## 0.1.0 (2024-12-19)
 
 ### Feat
@@ -23,7 +25,7 @@
 - **components/placeholder.tsx**: added a placeholder component
 - **components/header.tsx**: added an indicator for the currently opened page
 - **app/ui/header.tsx**: moved the penguin icon and right aligned pages
-- **app/*/page.tsx**: Added dummy pages
+- **app/\*/page.tsx**: Added dummy pages
 - **cliff.toml**: added git-cliff to devenv and github action
 - **app/page.tsx**: added a second row to the footer
 - **app/page.tsx**: added font awesome icons
@@ -36,14 +38,16 @@
 ### Fix
 
 - added semantic version github workflow
-- **updated-computer-descriptions**: descriptions are now more concise and the computers list vertically
+- **updated-computer-descriptions**: descriptions are now more concise and the
+  computers list vertically
 - bumped nixos version to 25.05
 - updated msi raider operating system
 - changed lenovo legion ram type
 - **app/tech/page.tsx**: added bottom padding to the tech content
 - converted existing assets to webp
 - **app/about/page.tsx**: put the emails on the about page on same row
-- **app/tech/computers.tsx**: added two floating points for RAM on computers page
+- **app/tech/computers.tsx**: added two floating points for RAM on computers
+  page
 - **app/tech/computers.tsx**: added versioning for nixos and proxmox
 - **components/tech/software.tsx**: added the icon wrapping for the CLI software
 - **components/header.tsx**: using the pathname instead of a state hook
