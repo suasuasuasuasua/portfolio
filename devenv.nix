@@ -21,6 +21,7 @@
   languages.javascript = {
     enable = true;
 
+    npm.enable = true;
     pnpm = {
       enable = true;
       install.enable = true;
@@ -30,6 +31,9 @@
   processes = {
     nextjs.exec = "pnpm dev";
   };
+
+  # Load env files automatically
+  dotenv.enable = true;
 
   devcontainer = {
     enable = true;
