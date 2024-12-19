@@ -1,0 +1,38 @@
+# https://github.com/commitizen-tools/commitizen-action/blob/673655ac2d9dbb1b6773c3b6191f78d9b3d2e4fa/.github/workflows/bumpversion.yaml
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  release:
+    if: ${{ startsWith(github.event.head_commit.message, 'bump:') }}
+    runs-on: ubuntu-latest
+    name: "Release version from version bump"
+    # Allow for releases and pull requests
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+
+      - name: Install git-cliff
+        uses: taiki-e/install-action@git-cliff
+
+      - name: Generate changelog
+        run: git-cliff -o body.md --latest
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: "body.md"
+          tag_name: ${{ steps.cz.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

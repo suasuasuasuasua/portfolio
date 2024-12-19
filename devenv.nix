@@ -2,18 +2,19 @@
   # https://devenv.sh/packages/
   packages = with pkgs;
     [
+      nixpkgs-fmt
+      nixfmt-rfc-style
+      markdownlint-cli
+
       git
       gnupg
       pinentry-curses
-      git-cliff
       commitizen
+      act
 
       fastfetch
       onefetch
       tree
-
-      markdownlint-cli
-      nixfmt-rfc-style
     ]
     ++ (with nodePackages; [vercel]);
 
