@@ -49,6 +49,8 @@ jobs:
           gpg_sign: false
           git_name: ${{ steps.gpg.outputs.name }}
           git_email: ${{ steps.gpg.outputs.email }}
+      - run: |
+          rm -rf .git/COMMIT_EDITMSG
 
       # Create a pull request to merge into staging
       - name: Create Pull Request
@@ -59,8 +61,7 @@ jobs:
           title: Bump version ${{ steps.cz.outputs.version }}
       # add tag manually, since the PR action does not push tags
       - run: |
-          git push origin --tags && \
-          rm -rf .git/COMMIT_EDITMSG
+          git push origin --tags
 
       - name: Release
         uses: softprops/action-gh-release@v1
