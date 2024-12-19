@@ -59,7 +59,8 @@ jobs:
           title: Bump version ${{ steps.cz.outputs.version }}
       # add tag manually, since the PR action does not push tags
       - run: |
-          git push origin --tags
+          git push origin --tags && \
+          rm -rf .git/COMMIT_EDITMSG
 
       - name: Release
         uses: softprops/action-gh-release@v1
