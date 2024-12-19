@@ -1,5 +1,8 @@
 # Personal Website
 
+| [![CodeQL](https://github.com/suasuasuasuasua/personal-website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suasuasuasuasua/personal-website/actions/workflows/github-code-scanning/codeql) | [![Generate changelog](https://github.com/suasuasuasuasua/personal-website/actions/workflows/changelog.yml/badge.svg)](https://github.com/suasuasuasuasua/personal-website/actions/workflows/changelog.yml) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 Hi, this is my personal website! I'm currently between classical web development
 with html, css, and javascript and modern web development with Next.js and
 React.
@@ -12,8 +15,8 @@ React.
   - [headless ui](https://headlessui.com/) as a complimentary `tailwindcss` UI
     library
 - [pnpm](https://pnpm.io) for the package manager
-  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` formatter
-  - [prettier](https://prettier.io) for the general linter
+  - [eslint](https://eslint.org) for the `js[x]` and `ts[x]` linter
+  - [prettier](https://prettier.io) for the general formatter
   - [font awesome icons](https://fontawesome.com) which are
     [set up for React and Next.js](https://docs.fontawesome.com/web/use-with/react)
 - Deploying (currently) on [Vercel](https://vercel.com) at
@@ -22,7 +25,7 @@ React.
 ## Project Workflow
 
 Currently, I have the production website at [sua.sh](https://sua.sh) and the
-preview website at [sua-dev.vercel.app](https://sua-dev.vercel.app). The
+preview website at [sua-drafts.vercel.app](https://sua-drafts.vercel.app). The
 production website is tied directly to
 [main](https://github.com/suasuasuasuasua/personal-website/tree/main), while the
 preview website is tied to
@@ -58,9 +61,10 @@ gitGraph
    commit
 ```
 
-TLDR; go to [sua-dev.vercel.app](https://sua-dev.vercel.app) for the latest
-changes, but you will need to sign into [Vercel](https://vercel.com). Or, go to
-the [staging](https://github.com/suasuasuasuasua/personal-website/tree/staging)
+TLDR; go to [sua-drafts.vercel.app](https://sua-drafts.vercel.app) for the
+latest changes, but you will need to sign into [Vercel](https://vercel.com). Or,
+go to the
+[staging](https://github.com/suasuasuasuasua/personal-website/tree/staging)
 branch, pull the changes, and run `pnpm dev` to start up a local development web
 server.
 
@@ -72,8 +76,7 @@ Install `nix` from
 [Determinate Systems](https://determinate.systems/posts/determinate-nix-installer/).
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf -L \
-     https://install.determinate.systems/nix | sh -s -- install
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
 Use [`devenv`](https://devenv.sh) and [`direnv`](https://direnv.net) to install
@@ -100,3 +103,20 @@ commit title and subtext to ensure
 
 There are also a number of commit hooks set up for
 [pre-commit](https://pre-commit.com) to ensure consistent formatting and style.
+
+### Deployment
+
+Purchase a domain name from a domain name registrar like
+[namecheap](https://www.namecheap.com/). Alternatives include
+[Cloudflare](https://www.cloudflare.com/products/registrar/) or
+[GoDaddy](https://www.godaddy.com/).
+
+Vercel makes it easy to setup and deploy your `git` project. First, sign up and
+connect your GitHub account to Vercel, then create a new Vercel project from one
+of your GitHub repositories. Finally, connect the Vercel server's IP address and
+domain name by adding an A and CNAME record to your domain under your domain
+name provider.
+
+Each commit to `main` will be to the production website, and pushes to other
+branches will be to preview websites. See each build and deployment status under
+the `deployment` tab.
