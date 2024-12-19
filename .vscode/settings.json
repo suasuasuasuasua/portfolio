@@ -11,7 +11,7 @@
     "devenv.nix": "devenv.lock, devenv.yaml, .envrc",
     ".gitignore": "cliff.toml, .cz.toml, .pre-commit-config.yaml",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
-    ".eslintrc.json": "prettier.config.mjs, .markdownlint.yaml",
+    ".eslintrc.json": "prettier.config.mjs",
     "next.config.mjs": "next-env.d.ts, tsconfig.json",
     "tailwind.config.ts": "postcss.config.mjs"
   }
