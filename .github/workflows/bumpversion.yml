@@ -44,7 +44,8 @@ jobs:
           # Don't push immediately!
           push: false
           changelog_increment_filename: body.md
-          git_redirect_stderr: true
+          # git_redirect_stderr: true
+          # Fix later
           gpg_sign: false
           git_name: ${{ steps.gpg.outputs.name }}
           git_email: ${{ steps.gpg.outputs.email }}
