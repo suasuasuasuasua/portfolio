@@ -1,3 +1,9 @@
+## 0.1.1 (2024-12-19)
+
+### Fix
+
+- removing creation of log file in workflow
+
 ## 0.1.0 (2024-12-19)
 
 ### Feat
