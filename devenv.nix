@@ -2,18 +2,19 @@
   # https://devenv.sh/packages/
   packages = with pkgs;
     [
+      nixpkgs-fmt
+      nixfmt-rfc-style
+      markdownlint-cli
+
       git
       gnupg
       pinentry-curses
-      git-cliff
       commitizen
+      act
 
       fastfetch
       onefetch
       tree
-
-      markdownlint-cli
-      nixfmt-rfc-style
     ]
     ++ (with nodePackages; [vercel]);
 
@@ -26,6 +27,10 @@
     };
   };
 
+  processes = {
+    nextjs.exec = "pnpm dev";
+  };
+
   devcontainer = {
     enable = true;
     settings = {
@@ -34,7 +39,7 @@
     };
   };
 
-  pre-commit.hooks = {
+  git-hooks.hooks = {
     # Nix
     alejandra.enable = true;
     deadnix.enable = true;
