@@ -62,12 +62,6 @@
 
     # HTML, CSS, JS, TS, etc.
     prettier.enable = true;
-    eslint = {
-      enable = true;
-      args = ["--fix app/"];
-      settings = {
-        extensions = "\.(js|jsx|ts|tsx|mdx)$";
-      };
-    };
+    eslint.enable = true;
   };
 }
