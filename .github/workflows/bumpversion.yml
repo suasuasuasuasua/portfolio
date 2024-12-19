@@ -41,7 +41,7 @@ jobs:
           INPUT_GIT_NAME: ${{ steps.gpg.outputs.name }}
           # Hack cause gnupg doesn't allow making key pair with invalid email
           INPUT_GIT_EMAIL: ${{ steps.gpg.outputs.email }}
-          INPUT_PUSH: "true"
+          INPUT_PUSH: "false"
         run: |
           ## Modified from the entrypoint.sh in commitizen action github script
           # Install python and commitizen
