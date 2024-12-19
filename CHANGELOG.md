@@ -1,3 +1,27 @@
+## 0.2.0 (2024-12-19)
+
+### Feat
+
+- using workflow from resume template
+- using git cliff to generate changes
+
+### Fix
+
+- added missing cliff config file (#148)
+- adding pull request step in workflow
+- added brackets around the git email
+- removing committer section from pull request
+- downgrading create pull requests from 7 to 4
+- don't redirect stderr from git
+- attempting to delete git commit message
+- attempting to remove the commit edit message
+- remove signed push from gpg step
+- setting input push to false on workflow
+- adding python gitignore when i use commitizen for workflow
+- ignore the release body file
+- removing creation of log file in workflow
+- added semantic version github workflow
+
 ## 0.1.0 (2024-12-19)
 
 ### Feat
