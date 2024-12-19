@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.0 (2024-12-19)
+
+### Feat
+
+- added the latest version to footer
+
 ## 0.1.2 (2024-12-19)
 
 ### Fix
