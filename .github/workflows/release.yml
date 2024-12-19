@@ -1,5 +1,4 @@
-# https://github.com/commitizen-tools/commitizen-action/blob/673655ac2d9dbb1b6773c3b6191f78d9b3d2e4fa/.github/workflows/bumpversion.yaml
-name: Bump version
+name: Release
 
 # Allow for releases
 on:
@@ -10,7 +9,7 @@ on:
 
 jobs:
   bump-version:
-    if: ${{ !startsWith(github.event.head_commit.message, 'bump:') }}
+    if: ${{ startsWith(github.event.head_commit.message, 'bump:') }}
     runs-on: ubuntu-latest
     name: "Bump version and create changelog with commitizen"
     permissions:
@@ -47,19 +46,11 @@ jobs:
           gpg_sign: true
           git_name: ${{ steps.gpg.outputs.name }}
           git_email: ${{ steps.gpg.outputs.email }}
-      - run: |
-          rm -rf .git/COMMIT_EDITMSG
 
-      # Create a pull request to merge into staging
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          sign-commits: true
-          committer:
-            "${{ steps.gpg.outputs.name }} <${{ steps.gpg.outputs.email }}>"
-          branch: bump-version-${{ steps.cz.outputs.version }}
-          title: Bump version ${{ steps.cz.outputs.version }}
-      # add tag manually, since the PR action does not push tags
-      - run: |
-          git push origin --tags
+          body_path: "body.md"
+          tag_name: ${{ steps.cz.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
