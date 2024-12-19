@@ -104,7 +104,6 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          sign-commits: true
           committer:
             "${{ steps.gpg.outputs.name }} <${{ steps.gpg.outputs.email }}>"
           branch: bump-version-${{ steps.cz.outputs.version }}
