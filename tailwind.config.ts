@@ -14,6 +14,10 @@ const config: Config = {
       },
     },
   },
+  future: {
+    // Disable hover for mobile devices
+    hoverOnlyWhenSupported: true,
+  },
   plugins: [],
 };
 export default config;
