@@ -32,7 +32,6 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           git_commit_gpgsign: true
           git_tag_gpgsign: true
-          git_push_gpgsign: true
           git_config_global: true
           trust_level: 5
 
