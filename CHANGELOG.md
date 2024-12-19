@@ -1,3 +1,9 @@
+## 0.2.1 (2024-12-19)
+
+### Fix
+
+- using different workflow for git cliff
+
 ## 0.2.0 (2024-12-19)
 
 ### Feat
