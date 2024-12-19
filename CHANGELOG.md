@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.2 (2024-12-19)
+
+### Fix
+
+- reverting to commitizen from git-cliff
+
 ## 0.1.1 (2024-12-19)
 
 ### Fix
