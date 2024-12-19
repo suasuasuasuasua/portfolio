@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.1 (2024-12-19)
+
+### Fix
+
+- added git cliff for release body
+
 ## 0.1.0 (2024-12-19)
 
 ### Feat
