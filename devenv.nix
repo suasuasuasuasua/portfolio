@@ -43,7 +43,10 @@
     commitizen.enable = true;
 
     # Docs
-    markdownlint.enable = true;
+    markdownlint = {
+      enable = true;
+      args = ["--fix"];
+    };
     typos.enable = true;
 
     # General
