@@ -221,6 +221,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-
-# Ignore the release body
-body.md
