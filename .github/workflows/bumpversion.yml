@@ -59,7 +59,7 @@ jobs:
           echo "Git name: $(git config --get user.name)"
           echo "Git email: $(git config --get user.email)"
 
-          cz --no-raise 21 bump --yes --gpg-sign --changelog --git-output-to-stderr --changelog-to-stdout >body.md
+          cz --no-raise 21 bump --yes --gpg-sign --changelog --git-output-to-stderr --changelog-to-stdout >LATEST.md
 
           if [[ $INPUT_ACTOR ]]; then
             ACTOR=$INPUT_ACTOR
