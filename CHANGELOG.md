@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.5 (2024-12-20)
+
+### Fix
+
+- flipping conditional for bump version
+
 ## 0.2.4 (2024-12-20)
 
 ### Fix
