@@ -8,8 +8,8 @@ export function Software({
     <div>
       {/* Name */}
       <div className="flex flex-row md:flex-col">
-        <span className="inline-flex space-x-1">
-          {Icon ? <Icon className="mt-1" /> : ""}
+        <span className="mr-1 inline-flex space-x-1.5 sm:mr-0">
+          {Icon ? <Icon className="mt-1 sm:mt-0" /> : ""}
           <HighlightedLink link={link} highlight="text-blue-400">
             {name}
           </HighlightedLink>
