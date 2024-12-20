@@ -4,8 +4,8 @@ name: Release
 on:
   push:
     branches:
+      # Only create releases for main or else releases will be very crowded
       - main
-      - staging
 
 jobs:
   release:

@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 0.2.2 (2024-12-20)
+
+### Fix
+
+- added small margin between name and icon for software  (#159)
+
+## 0.2.1 (2024-12-20)
+
+### Fix
+
+- increased padding for software platforms under tech (#157)
+
+## 0.2.0 (2024-12-19)
+
+### Feat
+
+- added the latest version to footer
+
 ## 0.1.2 (2024-12-19)
 
 ### Fix

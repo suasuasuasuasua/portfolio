@@ -32,7 +32,7 @@ export default function TechPage() {
         {/* Desktop Accessories */}
         <div>
           <p className="text-lg">Desktop Accessories</p>
-          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          <ul className="flex flex-col md:flex-row md:space-x-8">
             {Object.entries(desktopAccessories).map(([key, value]) => (
               <li key={key}>
                 <Device device={value} />
@@ -44,7 +44,7 @@ export default function TechPage() {
         {/* Devices */}
         <div>
           <p className="text-lg">Devices</p>
-          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          <ul className="flex flex-col md:flex-row md:space-x-8">
             {Object.entries(devices).map(([key, value]) => (
               <li key={key}>
                 <Device device={value} />
@@ -56,7 +56,7 @@ export default function TechPage() {
         {/* Wearables */}
         <div>
           <p className="text-lg">Wearables</p>
-          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          <ul className="flex flex-col md:flex-row md:space-x-8">
             {Object.entries(wearables).map(([key, value]) => (
               <li key={key}>
                 <Device device={value} />
@@ -68,7 +68,7 @@ export default function TechPage() {
         {/* Headphones */}
         <div>
           <p className="text-lg">Headphones</p>
-          <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+          <ul className="flex flex-col md:flex-row md:space-x-8">
             {Object.entries(headphones).map(([key, value]) => (
               <li key={key}>
                 <Device device={value} />
@@ -80,7 +80,7 @@ export default function TechPage() {
       {/* Development Section */}
       <div>
         <p className="text-xl">Development</p>
-        <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+        <ul className="flex flex-col md:flex-row md:space-x-8">
           {Object.entries(devSoftware).map(([key, value]) => (
             <li key={key}>
               <Software software={value} />
@@ -92,7 +92,7 @@ export default function TechPage() {
       {/* CLI Development Section */}
       <div>
         <p className="text-xl">CLI</p>
-        <ul className="flex flex-col md:flex-row md:space-x-8 lg:flex-row">
+        <ul className="flex flex-col md:flex-row md:space-x-8">
           {Object.entries(cliSoftware).map(([key, value]) => (
             <li key={key}>
               <Software software={value} />
@@ -104,8 +104,7 @@ export default function TechPage() {
       {/* General Software */}
       <div>
         <p className="text-xl">General</p>
-
-        <ul className="flex flex-col sm:space-x-4 md:flex-row md:space-x-8 lg:flex-row">
+        <ul className="flex flex-col md:flex-row md:space-x-8">
           {Object.entries(genSoftware).map(([key, value]) => (
             <li key={key}>
               <Software software={value} />

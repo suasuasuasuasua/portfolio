@@ -1,6 +1,6 @@
 {
   "name": "sua-personal-website",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -24,6 +24,7 @@
     "cssnano": "^7.0.6",
     "eslint": "^9.13.0",
     "eslint-config-next": "15.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
