@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.1 (2024-12-20)
+
+### Fix
+
+- increased padding for software platforms under tech (#157)
+
 ## 0.2.0 (2024-12-19)
 
 ### Feat
