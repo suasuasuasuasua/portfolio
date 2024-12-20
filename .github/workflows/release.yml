@@ -36,6 +36,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.cz.outputs.version }}
-          generate_release_notes: true
+          body_path: "LATEST.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
