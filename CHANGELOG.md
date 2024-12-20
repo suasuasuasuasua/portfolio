@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.4 (2024-12-20)
+
+### Fix
+
+- added dry run flag to release workflow
+
 ## 0.2.3 (2024-12-20)
 
 ### Fix
