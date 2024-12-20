@@ -3,8 +3,10 @@ import { FaApple, FaFirefox, FaLinux, FaSafari } from "react-icons/fa";
 import {
   SiAlacritty,
   SiElement,
+  SiHomebrew,
   SiIterm2,
   SiNeovim,
+  SiNixos,
   SiObsidian,
   SiObsstudio,
   SiProton,
@@ -56,12 +58,14 @@ export const cliSoftware: SoftwareProps = {
     name: "nix",
     description: "Declarative functional package manager",
     link: "https://nixos.org/",
+    icon: SiNixos,
     platforms: [FaApple, FaLinux],
   },
-  brew: {
-    name: "brew",
+  homebrew: {
+    name: "homebrew",
     description: "Third party package manager for macOS and Linux",
     link: "https://brew.sh/",
+    icon: SiHomebrew,
     platforms: [FaApple, FaLinux],
   },
   devenv: {

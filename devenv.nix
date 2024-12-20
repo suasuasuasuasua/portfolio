@@ -2,29 +2,38 @@
   # https://devenv.sh/packages/
   packages = with pkgs;
     [
+      nixpkgs-fmt
+      nixfmt-rfc-style
+      markdownlint-cli
+
       git
       gnupg
       pinentry-curses
-      git-cliff
       commitizen
+      act
 
       fastfetch
       onefetch
       tree
-
-      markdownlint-cli
-      nixfmt-rfc-style
     ]
     ++ (with nodePackages; [vercel]);
 
   languages.javascript = {
     enable = true;
 
+    npm.enable = true;
     pnpm = {
       enable = true;
       install.enable = true;
     };
   };
+
+  processes = {
+    nextjs.exec = "pnpm dev";
+  };
+
+  # Load env files automatically
+  dotenv.enable = true;
 
   devcontainer = {
     enable = true;
@@ -34,7 +43,7 @@
     };
   };
 
-  pre-commit.hooks = {
+  git-hooks.hooks = {
     # Nix
     alejandra.enable = true;
     deadnix.enable = true;
@@ -53,12 +62,6 @@
 
     # HTML, CSS, JS, TS, etc.
     prettier.enable = true;
-    eslint = {
-      enable = true;
-      args = ["--fix app/"];
-      settings = {
-        extensions = "\.(js|jsx|ts|tsx|mdx)$";
-      };
-    };
+    eslint.enable = true;
   };
 }
