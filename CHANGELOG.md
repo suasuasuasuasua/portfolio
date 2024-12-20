@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.2 (2024-12-20)
+
+### Fix
+
+- added small margin between name and icon for software  (#159)
+
 ## 0.2.1 (2024-12-20)
 
 ### Fix
