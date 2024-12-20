@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.3 (2024-12-20)
+
+### Fix
+
+- fixed height offset for software icons (#168)
+
 ## 0.2.2 (2024-12-20)
 
 ### Fix
