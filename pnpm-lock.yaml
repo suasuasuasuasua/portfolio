@@ -47,6 +47,9 @@ importers:
       eslint-config-next:
         specifier: 15.0.0
         version: 15.0.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3)
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.13.0(jiti@1.21.6))
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
@@ -1563,6 +1566,15 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  eslint-config-prettier@9.1.0:
+    resolution:
+      {
+        integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==,
+      }
+    hasBin: true
+    peerDependencies:
+      eslint: ">=7.0.0"
 
   eslint-import-resolver-node@0.3.9:
     resolution:
@@ -3653,10 +3665,10 @@ packages:
       }
     engines: { node: ">=12" }
 
-  yaml@2.6.0:
+  yaml@2.6.1:
     resolution:
       {
-        integrity: sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==,
+        integrity: sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==,
       }
     engines: { node: ">= 14" }
     hasBin: true
@@ -4680,6 +4692,10 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
 
+  eslint-config-prettier@9.1.0(eslint@9.13.0(jiti@1.21.6)):
+    dependencies:
+      eslint: 9.13.0(jiti@1.21.6)
+
   eslint-import-resolver-node@0.3.9:
     dependencies:
       debug: 3.2.7
@@ -5419,7 +5435,7 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.47):
     dependencies:
       lilconfig: 3.1.2
-      yaml: 2.6.0
+      yaml: 2.6.1
     optionalDependencies:
       postcss: 8.4.47
 
@@ -6021,21 +6037,7 @@ snapshots:
       ansi-styles: 6.2.1
       string-width: 5.1.2
       strip-ansi: 7.1.0
-    dev: true
 
-  /yaml@2.6.0:
-    resolution:
-      {
-        integrity: sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==,
-      }
-    engines: { node: ">= 14" }
-    hasBin: true
-    dev: true
+  yaml@2.6.1: {}
 
-  /yocto-queue@0.1.0:
-    resolution:
-      {
-        integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==,
-      }
-    engines: { node: ">=10" }
-    dev: true
+  yocto-queue@0.1.0: {}

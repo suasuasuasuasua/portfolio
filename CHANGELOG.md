@@ -4,7 +4,7 @@
 
 ### Fix
 
-- added small margin between name and icon for software  (#159)
+- added small margin between name and icon for software (#159)
 
 ## 0.2.1 (2024-12-20)
 
