@@ -9,7 +9,9 @@ on:
 
 jobs:
   release:
-    if: ${{ startsWith(github.event.head_commit.message, 'bump:') }}
+    if: |
+      ${{ startsWith(github.event.head_commit.message, 'bump:') }} ||
+      ${{ startsWith(github.event.head_commit.message, 'Bump') }}
     runs-on: ubuntu-latest
     name: "Release version from version bump"
     # Allow for releases and pull requests
@@ -28,9 +30,13 @@ jobs:
         uses: commitizen-tools/commitizen-action@master
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          changelog_increment_filename: LATEST.md
           git_redirect_stderr: true
+          dry_run: true
           push: false
+
+      - name: Push tag to origin
+        run: |
+          git push origin tag ${{ steps.cz.outputs.version }}
 
       - name: Release
         uses: softprops/action-gh-release@v1

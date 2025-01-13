@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 0.2.5 (2024-12-20)
+
+### Fix
+
+- flipping conditional for bump version
+
+## 0.2.4 (2024-12-20)
+
+### Fix
+
+- added dry run flag to release workflow
+
+## 0.2.3 (2024-12-20)
+
+### Fix
+
+- fixed height offset for software icons (#168)
+
 ## 0.2.2 (2024-12-20)
 
 ### Fix

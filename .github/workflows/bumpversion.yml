@@ -10,7 +10,9 @@ on:
 
 jobs:
   bump-version:
-    if: ${{ !startsWith(github.event.head_commit.message, 'bump:') }}
+    if: |
+      ${{ !startsWith(github.event.head_commit.message, 'bump:') }} &&
+      ${{ !startsWith(github.event.head_commit.message, 'Bump') }}
     runs-on: ubuntu-latest
     name: "Bump version and create changelog with commitizen"
     permissions:
@@ -59,7 +61,7 @@ jobs:
           echo "Git name: $(git config --get user.name)"
           echo "Git email: $(git config --get user.email)"
 
-          cz --no-raise 21 bump --yes --gpg-sign --changelog --git-output-to-stderr --changelog-to-stdout >LATEST.md
+          cz --no-raise 21 bump --yes --gpg-sign --changelog --git-output-to-stderr --files-only
 
           if [[ $INPUT_ACTOR ]]; then
             ACTOR=$INPUT_ACTOR
@@ -108,6 +110,3 @@ jobs:
             "${{ steps.gpg.outputs.name }} <${{ steps.gpg.outputs.email }}>"
           branch: bump-version-${{ steps.cz.outputs.version }}
           title: Bump version ${{ steps.cz.outputs.version }}
-      # add tag manually, since the PR action does not push tags
-      - run: |
-          git push origin --tags
